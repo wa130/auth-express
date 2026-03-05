@@ -4,6 +4,8 @@ import express from 'express'
 const app = express()
 const port = process.env.PORT
 
+app.use(express.json())
+
 app.get('/testing', (req, res) => {
     res.status(200).json(
         {
